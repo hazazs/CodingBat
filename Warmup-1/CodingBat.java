@@ -17,7 +17,7 @@ public class CodingBat {
     true if we are in trouble.
     */
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-        return aSmile && bSmile || !aSmile && !bSmile;
+        return (aSmile && bSmile) || (!aSmile && !bSmile);
     }
     
     /*
@@ -73,7 +73,7 @@ public class CodingBat {
     public boolean posNeg(int a, int b, boolean negative) {
     if (negative)
         return a < 0 && b < 0;
-    return a < 0 && b > 0 || a > 0 && b < 0;
+    return (a < 0 && b > 0) || (a > 0 && b < 0);
     }
     
     /*
