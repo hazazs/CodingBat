@@ -86,4 +86,54 @@ public class CodingBat {
         return str.startsWith("not") ? str : "not " + str;
     }
     
+    /*
+    missingChar
+    Given a non-empty string and an int n, return a new string where the char at index n has
+    been removed. The value of n will be a valid index of a char in the original string (i.e. n will
+    be in the range 0..str.length()-1 inclusive).
+     */
+    public String missingChar(String str, int n) {
+        return str.substring(0, n) + str.substring(n + 1, str.length());
+    }
+    
+    /*
+    frontBack
+    Given a string, return a new string where the first and last chars have been exchanged.
+     */
+    public String frontBack(String str) {
+        if (str.length() > 1)
+            return str.charAt(str.length()-1) + str.substring(1, str.length()-1) + str.charAt(0);
+        return str;
+    }
+    
+    /*
+    front3
+    Given a string, we'll say that the front is the first 3 chars of the string. If the string length
+    is less than 3, the front is whatever is there. Return a new string which is 3 copies of the
+    front.
+     */
+    public String front3(String str) {
+        if (str.length() < 3)
+            return str + str + str;
+        return str.substring(0, 3) + str.substring(0, 3) + str.substring(0, 3);
+    }
+    
+    /*
+    backAround
+    Given a string, take the last char and return a new string with the last char added at the
+    front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+     */
+    public String backAround(String str) {
+        return str.charAt(str.length()-1) + str + str.charAt(str.length()-1);
+    }
+    
+    /*
+    or35
+    Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the
+    % "mod" operator -- see Introduction to Mod
+     */
+    public boolean or35(int n) {
+        return n % 3 == 0 || n % 5 == 0;
+    }
+    
 }
