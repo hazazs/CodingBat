@@ -181,4 +181,54 @@ public class CodingBat {
         return (a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19);
     }
     
+    /*
+    loneTeen
+    We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values,
+    return true if one or the other is teen, but not both.
+     */
+    public boolean loneTeen(int a, int b) {
+        boolean aTeen = a >= 13 && a <= 19 && (b < 13 || b > 19);
+        boolean bTeen = b >= 13 && b <= 19 && (a < 13 || a > 19);
+        return aTeen || bTeen;
+    }
+    
+    /*
+    delDel
+    Given a string, if the string "del" appears starting at index 1, return a string where that
+    "del" has been deleted. Otherwise, return the string unchanged.
+     */
+    public String delDel(String str) {
+        if (str.length() > 3 && str.substring(1, 4).equals("del"))
+            return str.charAt(0) + str.substring(4);
+        return str;
+    }
+    
+    /*
+    mixStart
+    Return true if the given string begins with "mix", except the 'm' can be anything, so "pix",
+    "9ix" .. all count.
+     */
+    public boolean mixStart(String str) {
+        return str.length() >= 3 && str.substring(1, 3).equals("ix");
+    }
+    
+    /*
+    startOz
+    Given a string, return a string made of the first 2 chars (if present), however include first
+    char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+     */
+    public String startOz(String str) {
+        if (str.length() > 0 && str.charAt(0) == 'o')
+            return str.length() > 1 && str.charAt(1) == 'z' ? "oz" : "o";
+        return str.length() > 1 && str.charAt(1) == 'z' ? "z" : "";
+    }
+    
+    /*
+    intMax
+    Given three int values, a b c, return the largest.
+     */
+    public int intMax(int a, int b, int c) {
+        return Math.max(Math.max(a, b), c);
+    }
+    
 }
