@@ -285,4 +285,31 @@ public class CodingBat {
         return a % 10 == b % 10;
     }
     
+    /*
+    endUp
+    Given a string, return a new string where the last 3 chars are now in upper case. If the
+    string has less than 3 chars, uppercase whatever is there. Note that str.toUpperCase()
+    returns the uppercase version of a string.
+     */
+    public String endUp(String str) {
+        if (str.length() > 3) {
+            String lastThreeChars = str.substring(str.length()-3);
+            return str.substring(0, str.length()-3) + lastThreeChars.toUpperCase();
+        }
+        return str.toUpperCase();
+    }
+    
+    /*
+    everyNth
+    Given a non-empty string and an int N, return the string made starting with char 0, and
+    then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or
+    more.
+     */
+    public String everyNth(String str, int n) {
+        String ret = "";
+        for (int i = 0; i < str.length(); i += n)
+            ret += str.charAt(i);
+        return ret;
+    }
+    
 }
