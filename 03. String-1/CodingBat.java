@@ -103,4 +103,112 @@ public class CodingBat {
         return str.substring(2) + str.substring(0, 2);
     }
     
+    /*
+    right2
+    Given a string, return a "rotated right 2" version where the last 2 chars are moved to the
+    start. The string length will be at least 2.
+     */
+    public String right2(String str) {
+        return str.substring(str.length()-2) + str.substring(0, str.length()-2);
+    }
+    
+    /*
+    theEnd
+    Given a string, return a string length 1 from its front, unless front is false, in which case
+    return a string length 1 from its back. The string will be non-empty.
+     */
+    public String theEnd(String str, boolean front) {
+        return front ? str.substring(0, 1) : str.substring(str.length()-1);
+    }
+    
+    /*
+    withouEnd2
+    Given a string, return a version without both the first and last char of the string. The string
+    may be any length, including 0.
+     */
+    public String withouEnd2(String str) {
+        return str.length() <= 2 ? "" : str.substring(1, str.length()-1);
+    }
+    
+    /*
+    middleTwo
+    Given a string of even length, return a string made of the middle two chars, so the string
+    "string" yields "ri". The string length will be at least 2.
+     */
+    public String middleTwo(String str) {
+        return str.substring(str.length()/2 - 1, str.length()/2 + 1);
+    }
+    
+    /*
+    endsLy
+    Given a string, return true if it ends in "ly".
+     */
+    public boolean endsLy(String str) {
+        return str.length() >= 2 && str.substring(str.length()-2).equals("ly");
+    }
+    
+    /*
+    nTwice
+    Given a string and an int n, return a string made of the first and last n chars from the
+    string. The string length will be at least n.
+     */
+    public String nTwice(String str, int n) {
+        return str.substring(0, n) + str.substring(str.length()-n);
+    }
+    
+    /*
+    twoChar
+    Given a string and an index, return a string length 2 starting at the given index. If the
+    index is too big or too small to define a string length 2, use the first 2 chars. The string
+    length will be at least 2.
+     */
+    public String twoChar(String str, int index) {
+        if (str.length()-index >= 2 && index >= 0)
+            return str.substring(index, index+2);
+        return str.substring(0, 2);
+    }
+    
+    /*
+    middleThree
+    Given a string of odd length, return the string length 3 from its middle, so "Candy" yields
+    "and". The string length will be at least 3.
+     */
+    public String middleThree(String str) {
+        return str.substring(str.length()/2 - 1, str.length()/2 + 2);
+    }
+    
+    /*
+    hasBad
+    Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as
+    with "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0.
+    Note: use .equals() to compare 2 strings.
+     */
+    public boolean hasBad(String str) {
+        if (str.length() <= 3)
+            return str.equals("bad");
+        return str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad");
+    }
+    
+    /*
+    atFirst
+    Given a string, return a string length 2 made of its first 2 chars. If the string length is less
+    than 2, use '@' for the missing chars.
+     */
+    public String atFirst(String str) {
+        if (str.length() == 0)
+            return "@@";
+        return str.length() == 1 ? str + "@" : str.substring(0, 2);
+    }
+    
+    /*
+    lastChars
+    Given 2 strings, a and b, return a new string made of the first char of a and the last char
+    of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+     */
+    public String lastChars(String a, String b) {
+        if (a.length() == 0)
+            return b.length() == 0 ? "@@" : "@" + b.substring(b.length() - 1);
+        return b.length() == 0 ? a.charAt(0) + "@" : a.charAt(0) + b.substring(b.length()-1);
+    }
+    
 }
