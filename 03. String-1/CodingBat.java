@@ -1,5 +1,5 @@
 public class CodingBat {
-    
+
     /*
     helloName
     Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
@@ -7,7 +7,7 @@ public class CodingBat {
     public String helloName(String name) {
         return "Hello " + name + "!";
     }
-    
+
     /*
     makeAbba
     Given two strings, a and b, return the result of putting them together in the order abba,
@@ -16,7 +16,7 @@ public class CodingBat {
     public String makeAbba(String a, String b) {
         return a + b + b + a;
     }
-    
+
     /*
     makeTags
     The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this
@@ -26,7 +26,7 @@ public class CodingBat {
     public String makeTags(String tag, String word) {
         return "<" + tag + ">" + word + "</" + tag + ">";
     }
-    
+
     /*
     makeOutWord
     Given an "out" string length 4, such as "<<>>", and a word, return a new string where
@@ -36,17 +36,17 @@ public class CodingBat {
     public String makeOutWord(String out, String word) {
         return out.substring(0, 2) + word + out.substring(2, 4);
     }
-    
+
     /*
     extraEnd
     Given a string, return a new string made of 3 copies of the last 2 chars of the original
     string. The string length will be at least 2.
      */
     public String extraEnd(String str) {
-        String sub = str.substring(str.length()-2);
+        String sub = str.substring(str.length() - 2);
         return sub + sub + sub;
     }
-    
+
     /*
     firstTwo
     Given a string, return the string made of its first two chars, so the String "Hello" yields
@@ -57,24 +57,24 @@ public class CodingBat {
     public String firstTwo(String str) {
         return str.length() < 2 ? str : str.substring(0, 2);
     }
-    
+
     /*
     firstHalf
     Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
      */
     public String firstHalf(String str) {
-        return str.substring(0, str.length()/2);
+        return str.substring(0, str.length() / 2);
     }
-    
+
     /*
     withoutEnd
     Given a string, return a version without the first and last char, so "Hello" yields "ell". The
     string length will be at least 2.
      */
     public String withoutEnd(String str) {
-        return str.substring(1, str.length()-1);
+        return str.substring(1, str.length() - 1);
     }
-    
+
     /*
     comboString
     Given 2 strings, a and b, return a string of the form short+long+short, with the shorter
@@ -84,7 +84,7 @@ public class CodingBat {
     public String comboString(String a, String b) {
         return a.length() > b.length() ? b + a + b : a + b + a;
     }
-    
+
     /*
     nonStart
     Given 2 strings, return their concatenation, except omit the first char of each. The strings
@@ -93,7 +93,7 @@ public class CodingBat {
     public String nonStart(String a, String b) {
         return a.substring(1) + b.substring(1);
     }
-    
+
     /*
     left2
     Given a string, return a "rotated left 2" version where the first 2 chars are moved to the
@@ -102,60 +102,60 @@ public class CodingBat {
     public String left2(String str) {
         return str.substring(2) + str.substring(0, 2);
     }
-    
+
     /*
     right2
     Given a string, return a "rotated right 2" version where the last 2 chars are moved to the
     start. The string length will be at least 2.
      */
     public String right2(String str) {
-        return str.substring(str.length()-2) + str.substring(0, str.length()-2);
+        return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
     }
-    
+
     /*
     theEnd
     Given a string, return a string length 1 from its front, unless front is false, in which case
     return a string length 1 from its back. The string will be non-empty.
      */
     public String theEnd(String str, boolean front) {
-        return front ? str.substring(0, 1) : str.substring(str.length()-1);
+        return front ? str.substring(0, 1) : str.substring(str.length() - 1);
     }
-    
+
     /*
     withouEnd2
     Given a string, return a version without both the first and last char of the string. The string
     may be any length, including 0.
      */
     public String withouEnd2(String str) {
-        return str.length() <= 2 ? "" : str.substring(1, str.length()-1);
+        return str.length() <= 2 ? "" : str.substring(1, str.length() - 1);
     }
-    
+
     /*
     middleTwo
     Given a string of even length, return a string made of the middle two chars, so the string
     "string" yields "ri". The string length will be at least 2.
      */
     public String middleTwo(String str) {
-        return str.substring(str.length()/2 - 1, str.length()/2 + 1);
+        return str.substring(str.length() / 2 - 1, str.length() / 2 + 1);
     }
-    
+
     /*
     endsLy
     Given a string, return true if it ends in "ly".
      */
     public boolean endsLy(String str) {
-        return str.length() >= 2 && str.substring(str.length()-2).equals("ly");
+        return str.length() >= 2 && str.substring(str.length() - 2).equals("ly");
     }
-    
+
     /*
     nTwice
     Given a string and an int n, return a string made of the first and last n chars from the
     string. The string length will be at least n.
      */
     public String nTwice(String str, int n) {
-        return str.substring(0, n) + str.substring(str.length()-n);
+        return str.substring(0, n) + str.substring(str.length() - n);
     }
-    
+
     /*
     twoChar
     Given a string and an index, return a string length 2 starting at the given index. If the
@@ -163,20 +163,20 @@ public class CodingBat {
     length will be at least 2.
      */
     public String twoChar(String str, int index) {
-        if (str.length()-index >= 2 && index >= 0)
-            return str.substring(index, index+2);
+        if (str.length() - index >= 2 && index >= 0)
+            return str.substring(index, index + 2);
         return str.substring(0, 2);
     }
-    
+
     /*
     middleThree
     Given a string of odd length, return the string length 3 from its middle, so "Candy" yields
     "and". The string length will be at least 3.
      */
     public String middleThree(String str) {
-        return str.substring(str.length()/2 - 1, str.length()/2 + 2);
+        return str.substring(str.length() / 2 - 1, str.length() / 2 + 2);
     }
-    
+
     /*
     hasBad
     Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as
@@ -188,7 +188,7 @@ public class CodingBat {
             return str.equals("bad");
         return str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad");
     }
-    
+
     /*
     atFirst
     Given a string, return a string length 2 made of its first 2 chars. If the string length is less
@@ -199,7 +199,7 @@ public class CodingBat {
             return "@@";
         return str.length() == 1 ? str + "@" : str.substring(0, 2);
     }
-    
+
     /*
     lastChars
     Given 2 strings, a and b, return a new string made of the first char of a and the last char
@@ -208,9 +208,9 @@ public class CodingBat {
     public String lastChars(String a, String b) {
         if (a.length() == 0)
             return b.length() == 0 ? "@@" : "@" + b.substring(b.length() - 1);
-        return b.length() == 0 ? a.charAt(0) + "@" : a.charAt(0) + b.substring(b.length()-1);
+        return b.length() == 0 ? a.charAt(0) + "@" : a.charAt(0) + b.substring(b.length() - 1);
     }
-    
+
     /*
     conCat
     Given two strings, append them together (known as "concatenation") and return the
@@ -221,8 +221,8 @@ public class CodingBat {
         if (!b.isEmpty() && a.endsWith(b.substring(0, 1)))
             return a + b.substring(1);
         return a + b;
-    }   
-    
+    }
+
     /*
     lastTwo
     Given a string of any length, return a new string where the last 2 chars, if present, are
@@ -230,13 +230,13 @@ public class CodingBat {
      */
     public String lastTwo(String str) {
         if (str.length() > 1) {
-            String last = str.substring(str.length()-1);
-            String secondLast = str.substring(str.length()-2, str.length()-1);
-            return str.substring(0, str.length()-2) + last + secondLast;
+            String last = str.substring(str.length() - 1);
+            String secondLast = str.substring(str.length() - 2, str.length() - 1);
+            return str.substring(0, str.length() - 2) + last + secondLast;
         }
         return str;
     }
-    
+
     /*
     seeColor
     Given a string, if the string begins with "red" or "blue" return that color string, otherwise
@@ -247,16 +247,16 @@ public class CodingBat {
             return "red";
         return str.length() > 3 && str.substring(0, 4).equals("blue") ? "blue" : "";
     }
-    
+
     /*
     frontAgain
     Given a string, return true if the first 2 chars in the string also appear at the end of the
     string, such as with "edited".
      */
     public boolean frontAgain(String str) {
-        return str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length()-2));
+        return str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length() - 2));
     }
-    
+
     /*
     minCat
     Given two strings, append them together (known as "concatenation") and return the
@@ -271,7 +271,7 @@ public class CodingBat {
             return a.substring(a.length() - b.length()) + b;
         return a + b.substring(b.length() - a.length());
     }
-    
+
     /*
     extraFront
     Given a string, return a new string made of 3 copies of the first 2 chars of the original
@@ -283,7 +283,7 @@ public class CodingBat {
             return str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
         return str + str + str;
     }
-    
+
     /*
     without2
     Given a string, if a length 2 substring appears at both its beginning and end, return a
@@ -291,11 +291,11 @@ public class CodingBat {
     may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
      */
     public String without2(String str) {
-        if (str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length()-2)))
+        if (str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length() - 2)))
             return str.substring(2);
         return str;
     }
-    
+
     /*
     deFront
     Given a string, return a version without the first 2 chars. Except keep the first char if it is
@@ -305,8 +305,7 @@ public class CodingBat {
         StringBuilder ret;
         if (str.length() > 0 && str.charAt(0) == 'a')
             ret = new StringBuilder("a");
-        else
-            ret = new StringBuilder(0);
+        else ret = new StringBuilder(0);
         if (str.length() > 1) {
             if (str.charAt(1) == 'b')
                 return ret.append("b").append(str.substring(2)).toString();
@@ -314,7 +313,7 @@ public class CodingBat {
         }
         return ret.toString();
     }
-    
+
     /*
     startWord
     Given a string and a second "word" string, we'll say that the word matches the string if it
@@ -329,7 +328,7 @@ public class CodingBat {
             return str.substring(0, word.length());
         return "";
     }
-    
+
     /*
     withoutX
     Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and
@@ -337,15 +336,15 @@ public class CodingBat {
      */
     public String withoutX(String str) {
         if (str.length() > 0 && str.charAt(0) == 'x') {
-            if (str.length() > 1 && str.charAt(str.length()-1) == 'x')
-                return str.substring(1, str.length()-1);
+            if (str.length() > 1 && str.charAt(str.length() - 1) == 'x')
+                return str.substring(1, str.length() - 1);
             return str.substring(1);
         }
-        if (str.length() > 1 && str.charAt(str.length()-1) == 'x')
-            return str.substring(0, str.length()-1);
+        if (str.length() > 1 && str.charAt(str.length() - 1) == 'x')
+            return str.substring(0, str.length() - 1);
         return str;
     }
-    
+
     /*
     withoutX2
     Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x'
@@ -355,8 +354,7 @@ public class CodingBat {
         StringBuilder ret;
         if (str.length() > 0 && str.charAt(0) != 'x')
             ret = new StringBuilder(str.substring(0, 1));
-        else
-            ret = new StringBuilder(0);
+        else ret = new StringBuilder(0);
         if (str.length() > 1) {
             if (str.charAt(1) != 'x')
                 return ret.append(str.charAt(1)).append(str.substring(2)).toString();
@@ -364,5 +362,5 @@ public class CodingBat {
         }
         return ret.toString();
     }
-    
+
 }

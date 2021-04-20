@@ -1,5 +1,5 @@
 public class CodingBat {
-    
+
     /*
     sleepIn
     The parameter weekday is true if it is a weekday, and the parameter vacation is true if we
@@ -9,7 +9,7 @@ public class CodingBat {
     public boolean sleepIn(boolean weekday, boolean vacation) {
         return !weekday || vacation;
     }
-    
+
     /*
     monkeyTrouble
     We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is
@@ -19,7 +19,7 @@ public class CodingBat {
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
         return (aSmile && bSmile) || (!aSmile && !bSmile);
     }
-    
+
     /*
     sumDouble
     Given two int values, return their sum. Unless the two values are the same, then return
@@ -28,7 +28,7 @@ public class CodingBat {
     public int sumDouble(int a, int b) {
         return a == b ? 2 * (a + b) : a + b;
     }
-    
+
     /*
     diff21
     Given an int n, return the absolute difference between n and 21, except return double the
@@ -37,7 +37,7 @@ public class CodingBat {
     public int diff21(int n) {
         return n > 21 ? 2 * (n - 21) : 21 - n;
     }
-    
+
     /*
     parrotTrouble
     We have a loud talking parrot. The "hour" parameter is the current hour time in the range
@@ -47,7 +47,7 @@ public class CodingBat {
     public boolean parrotTrouble(boolean talking, int hour) {
         return talking && (hour < 7 || hour > 20);
     }
-    
+
     /*
     makes10
     Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
@@ -55,7 +55,7 @@ public class CodingBat {
     public boolean makes10(int a, int b) {
         return a == 10 || b == 10 || a + b == 10;
     }
-    
+
     /*
     nearHundred
     Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes
@@ -64,18 +64,18 @@ public class CodingBat {
     public boolean nearHundred(int n) {
         return Math.abs(100 - n) <= 10 || Math.abs(200 - n) <= 10;
     }
-    
+
     /*
     posNeg
     Given 2 int values, return true if one is negative and one is positive. Except if the
     parameter "negative" is true, then return true only if both are negative.
      */
     public boolean posNeg(int a, int b, boolean negative) {
-    if (negative)
-        return a < 0 && b < 0;
-    return (a < 0 && b > 0) || (a > 0 && b < 0);
+        if (negative)
+            return a < 0 && b < 0;
+        return (a < 0 && b > 0) || (a > 0 && b < 0);
     }
-    
+
     /*
     notString
     Given a string, return a new string where "not " has been added to the front. However, if
@@ -85,7 +85,7 @@ public class CodingBat {
     public String notString(String str) {
         return str.startsWith("not") ? str : "not " + str;
     }
-    
+
     /*
     missingChar
     Given a non-empty string and an int n, return a new string where the char at index n has
@@ -95,17 +95,17 @@ public class CodingBat {
     public String missingChar(String str, int n) {
         return str.substring(0, n) + str.substring(n + 1, str.length());
     }
-    
+
     /*
     frontBack
     Given a string, return a new string where the first and last chars have been exchanged.
      */
     public String frontBack(String str) {
         if (str.length() > 1)
-            return str.charAt(str.length()-1) + str.substring(1, str.length()-1) + str.charAt(0);
+            return str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
         return str;
     }
-    
+
     /*
     front3
     Given a string, we'll say that the front is the first 3 chars of the string. If the string length
@@ -117,16 +117,16 @@ public class CodingBat {
             return str + str + str;
         return str.substring(0, 3) + str.substring(0, 3) + str.substring(0, 3);
     }
-    
+
     /*
     backAround
     Given a string, take the last char and return a new string with the last char added at the
     front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
      */
     public String backAround(String str) {
-        return str.charAt(str.length()-1) + str + str.charAt(str.length()-1);
+        return str.charAt(str.length() - 1) + str + str.charAt(str.length() - 1);
     }
-    
+
     /*
     or35
     Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the
@@ -135,7 +135,7 @@ public class CodingBat {
     public boolean or35(int n) {
         return n % 3 == 0 || n % 5 == 0;
     }
-    
+
     /*
     front22
     Given a string, take the first 2 chars and return the string with the 2 chars added at both
@@ -147,7 +147,7 @@ public class CodingBat {
             return str + str + str;
         return str.substring(0, 2) + str + str.substring(0, 2);
     }
-    
+
     /*
     startHi
     Given a string, return true if the string starts with "hi" and false otherwise.
@@ -155,7 +155,7 @@ public class CodingBat {
     public boolean startHi(String str) {
         return str.length() >= 2 && str.substring(0, 2).equals("hi");
     }
-    
+
     /*
     icyHot
     Given two temperatures, return true if one is less than 0 and the other is greater than 100.
@@ -163,7 +163,7 @@ public class CodingBat {
     public boolean icyHot(int temp1, int temp2) {
         return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
     }
-    
+
     /*
     in1020
     Given 2 int values, return true if either of them is in the range 10..20 inclusive.
@@ -171,7 +171,7 @@ public class CodingBat {
     public boolean in1020(int a, int b) {
         return (a >= 10 && a <= 20) || (b >= 10 && b <= 20);
     }
-    
+
     /*
     hasTeen
     We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values,
@@ -180,7 +180,7 @@ public class CodingBat {
     public boolean hasTeen(int a, int b, int c) {
         return (a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19);
     }
-    
+
     /*
     loneTeen
     We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values,
@@ -191,7 +191,7 @@ public class CodingBat {
         boolean bTeen = b >= 13 && b <= 19 && (a < 13 || a > 19);
         return aTeen || bTeen;
     }
-    
+
     /*
     delDel
     Given a string, if the string "del" appears starting at index 1, return a string where that
@@ -202,7 +202,7 @@ public class CodingBat {
             return str.charAt(0) + str.substring(4);
         return str;
     }
-    
+
     /*
     mixStart
     Return true if the given string begins with "mix", except the 'm' can be anything, so "pix",
@@ -211,7 +211,7 @@ public class CodingBat {
     public boolean mixStart(String str) {
         return str.length() >= 3 && str.substring(1, 3).equals("ix");
     }
-    
+
     /*
     startOz
     Given a string, return a string made of the first 2 chars (if present), however include first
@@ -222,7 +222,7 @@ public class CodingBat {
             return str.length() > 1 && str.charAt(1) == 'z' ? "oz" : "o";
         return str.length() > 1 && str.charAt(1) == 'z' ? "z" : "";
     }
-    
+
     /*
     intMax
     Given three int values, a b c, return the largest.
@@ -230,18 +230,18 @@ public class CodingBat {
     public int intMax(int a, int b, int c) {
         return Math.max(Math.max(a, b), c);
     }
-    
+
     /*
     close10
     Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the
     event of a tie. Note that Math.abs(n) returns the absolute value of a number.
      */
     public int close10(int a, int b) {
-        if (Math.abs(10-a) == Math.abs(10-b))
+        if (Math.abs(10 - a) == Math.abs(10 - b))
             return 0;
-        return Math.abs(10-a) > Math.abs(10-b) ? b : a;
+        return Math.abs(10 - a) > Math.abs(10 - b) ? b : a;
     }
-    
+
     /*
     in3050
     Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are
@@ -252,7 +252,7 @@ public class CodingBat {
         boolean bothInRange4050 = a >= 40 && a <= 50 && b >= 40 && b <= 50;
         return bothInRange3040 || bothInRange4050;
     }
-    
+
     /*
     max1020
     Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or
@@ -263,7 +263,7 @@ public class CodingBat {
             return b >= 10 && b <= 20 ? Math.max(a, b) : a;
         return b >= 10 && b <= 20 ? b : 0;
     }
-    
+
     /*
     stringE
     Return true if the given string contains between 1 and 3 'e' chars.
@@ -275,7 +275,7 @@ public class CodingBat {
                 count++;
         return count >= 1 && count <= 3;
     }
-    
+
     /*
     lastDigit
     Given two non-negative int values, return true if they have the same last digit, such as
@@ -284,7 +284,7 @@ public class CodingBat {
     public boolean lastDigit(int a, int b) {
         return a % 10 == b % 10;
     }
-    
+
     /*
     endUp
     Given a string, return a new string where the last 3 chars are now in upper case. If the
@@ -293,12 +293,12 @@ public class CodingBat {
      */
     public String endUp(String str) {
         if (str.length() > 3) {
-            String lastThreeChars = str.substring(str.length()-3);
-            return str.substring(0, str.length()-3) + lastThreeChars.toUpperCase();
+            String lastThreeChars = str.substring(str.length() - 3);
+            return str.substring(0, str.length() - 3) + lastThreeChars.toUpperCase();
         }
         return str.toUpperCase();
     }
-    
+
     /*
     everyNth
     Given a non-empty string and an int N, return the string made starting with char 0, and
@@ -311,5 +311,5 @@ public class CodingBat {
             ret += str.charAt(i);
         return ret;
     }
-    
+
 }
