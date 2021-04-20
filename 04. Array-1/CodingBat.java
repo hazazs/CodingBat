@@ -70,7 +70,7 @@ public class CodingBat {
         int max = Math.max(nums[0], nums[2]);
         return new int[] {max, max, max};
     }
-    
+
     /*
     sum2
     Given an array of ints, return the sum of the first 2 elements in the array. If the array
@@ -80,7 +80,7 @@ public class CodingBat {
     public int sum2(int[] nums) {
         return nums.length > 1 ? nums[0] + nums[1] : (nums.length > 0 ? nums[0] : 0);
     }
-    
+
     /*
     middleWay
     Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their
@@ -89,7 +89,7 @@ public class CodingBat {
     public int[] middleWay(int[] a, int[] b) {
         return new int[] {a[1], b[1]};
     }
-    
+
     /*
     makeEnds
     Given an array of ints, return a new array length 2 containing the first and last elements
@@ -98,7 +98,7 @@ public class CodingBat {
     public int[] makeEnds(int[] nums) {
         return new int[] {nums[0], nums[nums.length - 1]};
     }
-    
+
     /*
     has23
     Given an int array length 2, return true if it contains a 2 or a 3.
@@ -106,7 +106,7 @@ public class CodingBat {
     public boolean has23(int[] nums) {
         return nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3;
     }
-    
+
     /*
     no23
     Given an int array length 2, return true if it does not contain a 2 or 3.
@@ -114,7 +114,7 @@ public class CodingBat {
     public boolean no23(int[] nums) {
         return !(nums[0] == 2 || nums[0] == 3 || nums[1] == 2 || nums[1] == 3);
     }
-    
+
     /*
     makeLast
     Given an int array, return a new array with double the length where its last element is the
@@ -126,7 +126,7 @@ public class CodingBat {
         ret[ret.length - 1] = nums[nums.length - 1];
         return ret;
     }
-    
+
     /*
     double23
     Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be
@@ -137,7 +137,7 @@ public class CodingBat {
             return nums[0] == 2 && nums[1] == 2 || nums[0] == 3 && nums[1] == 3;
         return false;
     }
-    
+
     /*
     fix23
     Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the
@@ -150,7 +150,7 @@ public class CodingBat {
             return new int[] {nums[0], 2, 0};
         return nums;
     }
-    
+
     /*
     start1
     Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as
@@ -161,7 +161,7 @@ public class CodingBat {
             return b.length > 0 && b[0] == 1 ? 2 : 1;
         return b.length > 0 && b[0] == 1 ? 1 : 0;
     }
-    
+
     /*
     biggerTwo
     Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each
@@ -170,7 +170,7 @@ public class CodingBat {
     public int[] biggerTwo(int[] a, int[] b) {
         return b[0] + b[1] > a[0] + a[1] ? b : a;
     }
-    
+
     /*
     makeMiddle
     Given an array of ints of even length, return a new array length 2 containing the middle
@@ -179,7 +179,7 @@ public class CodingBat {
     public int[] makeMiddle(int[] nums) {
         return new int[] {nums[nums.length / 2 - 1], nums[nums.length / 2]};
     }
-    
+
     /*
     plusTwo
     Given 2 int arrays, each length 2, return a new array length 4 containing all their
@@ -188,7 +188,7 @@ public class CodingBat {
     public int[] plusTwo(int[] a, int[] b) {
         return new int[] {a[0], a[1], b[0], b[1]};
     }
-    
+
     /*
     swapEnds
     Given an array of ints, swap the first and last elements in the array. Return the modified
@@ -200,7 +200,7 @@ public class CodingBat {
         nums[nums.length - 1] = temp;
         return nums;
     }
-    
+
     /*
     midThree
     Given an array of ints of odd length, return a new array length 3 containing the elements
@@ -210,7 +210,7 @@ public class CodingBat {
         int middleIndex = nums.length / 2;
         return new int[] {nums[middleIndex - 1], nums[middleIndex], nums[middleIndex + 1]};
     }
-    
+
     /*
     maxTriple
     Given an array of ints of odd length, look at the first, last, and middle values in the array
@@ -219,7 +219,7 @@ public class CodingBat {
     public int maxTriple(int[] nums) {
         return Math.max(Math.max(nums[0], nums[nums.length / 2]), nums[nums.length - 1]);
     }
-    
+
     /*
     frontPiece
     Given an int array of any length, return a new array of its first 2 elements. If the array is
@@ -228,7 +228,7 @@ public class CodingBat {
     public int[] frontPiece(int[] nums) {
         return nums.length > 1 ? new int[] {nums[0], nums[1]} : nums;
     }
-    
+
     /*
     unlucky1
     We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if
@@ -244,7 +244,7 @@ public class CodingBat {
         }
         return firstUnlucky || secondUnlucky || secondLastUnlucky;
     }
-    
+
     /*
     make2
     Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the
@@ -258,7 +258,7 @@ public class CodingBat {
             return new int[] {a[0], b[0]};
         return new int[] {a[0], a[1]};
     }
-    
+
     /*
     front11
     Given 2 int arrays, a and b, of any length, return a new array with the first element of
@@ -274,5 +274,5 @@ public class CodingBat {
             return new int[] {a[0]};
         return new int[] {a[0], b[0]};
     }
-    
+
 }
