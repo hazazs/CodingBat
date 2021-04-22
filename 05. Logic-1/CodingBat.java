@@ -8,9 +8,9 @@ public class CodingBat {
     the party with the given values is successful, or false otherwise.
      */
     public boolean cigarParty(int cigars, boolean isWeekend) {
-        return isWeekend? cigars >= 40 : cigars >= 40 && cigars <= 60;
+        return isWeekend ? cigars >= 40 : cigars >= 40 && cigars <= 60;
     }
-    
+
     /*
     dateFashion
     You and your date are trying to get a table at a restaurant. The parameter "you" is the
@@ -23,7 +23,7 @@ public class CodingBat {
     public int dateFashion(int you, int date) {
         return you <= 2 || date <= 2 ? 0 : you >= 8 || date >= 8 ? 2 : 1;
     }
-    
+
     /*
     squirrelPlay
     The squirrels in Palo Alto spend most of the day playing. In particular, they play if the
@@ -34,7 +34,7 @@ public class CodingBat {
     public boolean squirrelPlay(int temp, boolean isSummer) {
         return isSummer ? temp >= 60 && temp <= 100 : temp >= 60 && temp <= 90;
     }
-    
+
     /*
     caughtSpeeding
     You are driving a little too fast, and a police officer stops you. Write code to compute the
@@ -53,7 +53,7 @@ public class CodingBat {
             return 0;
         return speed >= 81 ? 2 : 1;
     }
-    
+
     /*
     sortaSum
     Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are
@@ -62,7 +62,7 @@ public class CodingBat {
     public int sortaSum(int a, int b) {
         return a + b >= 10 && a + b <= 19 ? 20 : a + b;
     }
-    
+
     /*
     alarmClock
     Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean
@@ -81,7 +81,7 @@ public class CodingBat {
             return "10:00";
         return "7:00";
     }
-    
+
     /*
     love6
     The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -91,7 +91,7 @@ public class CodingBat {
     public boolean love6(int a, int b) {
         return a == 6 || b == 6 || a + b == 6 || Math.abs(a - b) == 6;
     }
-    
+
     /*
     in1To10
     Given a number n, return true if n is in the range 1..10, inclusive. Unless outsideMode is
@@ -101,7 +101,7 @@ public class CodingBat {
     public boolean in1To10(int n, boolean outsideMode) {
         return outsideMode ? n <= 1 || n >= 10 : n >= 1 && n <= 10;
     }
-    
+
     /*
     specialEleven
     We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of
@@ -111,7 +111,7 @@ public class CodingBat {
     public boolean specialEleven(int n) {
         return n % 11 == 0 || n % 11 == 1;
     }
-    
+
     /*
     more20
     Return true if the given non-negative number is 1 or 2 more than a multiple of 20. See
@@ -120,7 +120,7 @@ public class CodingBat {
     public boolean more20(int n) {
         return n % 20 == 1 || n % 20 == 2;
     }
-    
+
     /*
     old35
     Return true if the given non-negative number is a multiple of 3 or 5, but not both. Use the
@@ -129,7 +129,7 @@ public class CodingBat {
     public boolean old35(int n) {
         return (n % 3 == 0 && n % 5 != 0) || (n % 5 == 0 && n % 3 != 0);
     }
-    
+
     /*
     less20
     Return true if the given non-negative number is 1 or 2 less than a multiple of 20. So for
@@ -138,7 +138,7 @@ public class CodingBat {
     public boolean less20(int n) {
         return n % 20 == 18 || n % 20 == 19;
     }
-    
+
     /*
     nearTen
     Given a non-negative number "num", return true if num is within 2 of a multiple of 10.
@@ -148,7 +148,7 @@ public class CodingBat {
     public boolean nearTen(int num) {
         return num % 10 <= 2 || num % 10 >= 8;
     }
-    
+
     /*
     teenSum
     Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19
@@ -157,7 +157,7 @@ public class CodingBat {
     public int teenSum(int a, int b) {
         return (a >= 13 && a <= 19) || (b >= 13 && b <= 19) ? 19 : a + b;
     }
-    
+
     /*
     answerCell
     Your cell phone rings. Return true if you should answer it. Normally you answer, except in
@@ -167,7 +167,7 @@ public class CodingBat {
     public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
         return (!isAsleep && !isMorning) || (!isAsleep && isMorning && isMom);
     }
-    
+
     /*
     teaParty
     We are having a party with amounts of tea and candy. Return the int outcome of the party
@@ -181,7 +181,7 @@ public class CodingBat {
             return tea >= 2 * candy || candy >= 2 * tea ? 2 : 1;
         return 0;
     }
-    
+
     /*
     fizzString
     Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b"
@@ -198,7 +198,7 @@ public class CodingBat {
             return "Buzz";
         return str;
     }
-    
+
     /*
     fizzString2
     Given an int n, return the string form of the number followed by "!". So the int 6 yields
@@ -218,7 +218,7 @@ public class CodingBat {
             return "Buzz!";
         return n + "!";
     }
-    
+
     /*
     twoAsOne
     Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
@@ -226,7 +226,7 @@ public class CodingBat {
     public boolean twoAsOne(int a, int b, int c) {
         return a + b == c || b + c == a || a + c == b;
     }
-    
+
     /*
     inOrder
     Given three ints, a b c, return true if b is greater than a, and c is greater than b. However,
@@ -235,7 +235,7 @@ public class CodingBat {
     public boolean inOrder(int a, int b, int c, boolean bOk) {
         return !bOk ? b > a && c > b : c > b;
     }
-    
+
     /*
     inOrderEqual
     Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11, or
@@ -245,7 +245,7 @@ public class CodingBat {
     public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
         return equalOk ? a <= b && b <= c : a < b && b < c;
     }
-    
+
     /*
     lastDigit
     Given three ints, a b c, return true if two or more of them have the same rightmost digit.
@@ -255,7 +255,7 @@ public class CodingBat {
     public boolean lastDigit(int a, int b, int c) {
         return a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10;
     }
-    
+
     /*
     lessBy10
     Given three ints, a b c, return true if one of them is 10 or more less than one of the
@@ -264,7 +264,7 @@ public class CodingBat {
     public boolean lessBy10(int a, int b, int c) {
         return Math.abs(a - b) >= 10 || Math.abs(a - c) >= 10 || Math.abs(b - c) >= 10;
     }
-    
+
     /*
     withoutDoubles
     Return the sum of two 6-sided dice rolls, each in the range 1..6. However, if noDoubles is
@@ -279,7 +279,7 @@ public class CodingBat {
         }
         return die1 + die2;
     }
-    
+
     /*
     maxMod5
     Given two int values, return whichever value is larger. However if the two values have the
@@ -290,7 +290,7 @@ public class CodingBat {
     public int maxMod5(int a, int b) {
         return a != b ? (a % 5 == b % 5 ? Math.min(a, b) : Math.max(a, b)) : 0;
     }
-    
+
     /*
     redTicket
     You have a red lottery ticket showing ints a, b, and c, each of which is 0, 1, or 2. If they
@@ -301,7 +301,7 @@ public class CodingBat {
     public int redTicket(int a, int b, int c) {
         return a == b && b == c ? (a == 2 ? 10 : 5) : (a != b && a != c ? 1 : 0);
     }
-    
+
     /*
     greenTicket
     You have a green lottery ticket, with ints a, b, and c on it. If the numbers are all different
@@ -311,7 +311,7 @@ public class CodingBat {
     public int greenTicket(int a, int b, int c) {
         return a != b && b != c && a != c ? 0 : (a == b && b == c ? 20 : 10);
     }
-    
+
     /*
     blueTicket
     You have a blue lottery ticket, with ints a, b, and c on it. This makes three pairs, which
@@ -326,7 +326,7 @@ public class CodingBat {
             return 5;
         return 0;
     }
-    
+
     /*
     shareDigit
     Given two ints, each in the range 10..99, return true if there is a digit that appears in both
@@ -336,7 +336,7 @@ public class CodingBat {
     public boolean shareDigit(int a, int b) {
         return a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b / 10 || a % 10 == b % 10;
     }
-    
+
     /*
     sumLimit
     Given 2 non-negative ints, a and b, return their sum, so long as the sum has the same
@@ -347,5 +347,5 @@ public class CodingBat {
     public int sumLimit(int a, int b) {
         return String.valueOf(a).length() == String.valueOf(a + b).length() ? a + b : a;
     }
-    
+
 }
