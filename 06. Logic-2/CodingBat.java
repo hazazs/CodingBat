@@ -10,18 +10,19 @@ public class CodingBat {
     public boolean makeBricks(int small, int big, int goal) {
         return 5 * big >= goal ? small >= goal % 5 : small + 5 * big >= goal;
     }
-    
+
     /*
     loneSum
     Given 3 int values, a b c, return their sum. However, if one of the values is the same as
     another of the values, it does not count towards the sum.
      */
     public int loneSum(int a, int b, int c) {
-        if (a == b || a == c)
+        if (a == b || a == c) {
             return b == c ? 0 : (a == b ? c : b);
-        else return b == c ? a : a + b + c;
+        }
+        return b == c ? a : a + b + c;
     }
-    
+
     /*
     luckySum
     Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does
@@ -29,11 +30,12 @@ public class CodingBat {
     then both b and c do not count.
      */
     public int luckySum(int a, int b, int c) {
-        if (a != 13)
+        if (a != 13) {
             return b == 13 ? a : (c == 13 ? a + b : a + b + c);
-        else return 0;
+        }
+        return 0;
     }
-    
+
     /*
     noTeenSum
     Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the
@@ -46,10 +48,11 @@ public class CodingBat {
     public int noTeenSum(int a, int b, int c) {
         return fixTeen(a) + fixTeen(b) + fixTeen(c);
     }
+
     public int fixTeen(int n) {
         return n >= 13 && n <= 19 && n != 15 && n != 16 ? 0 : n;
     }
-    
+
     /*
     roundSum
     For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit
@@ -62,10 +65,11 @@ public class CodingBat {
     public int roundSum(int a, int b, int c) {
         return round10(a) + round10(b) + round10(c);
     }
+
     public int round10(int num) {
         return num % 10 < 5 ? num - (num % 10) : num - (num % 10) + 10;
     }
-    
+
     /*
     closeFar
     Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most
@@ -77,18 +81,19 @@ public class CodingBat {
         boolean tForC = Math.abs(c - a) <= 1 && Math.abs(b - a) >= 2 && Math.abs(c - b) >= 2;
         return tForB || tForC;
     }
-    
+
     /*
     blackjack
     Given 2 int values greater than 0, return whichever value is nearest to 21 without going
     over. Return 0 if they both go over.
      */
     public int blackjack(int a, int b) {
-        if ((a > 21 && b <= 21) || (b > 21 && a <= 21))
+        if ((a > 21 && b <= 21) || (b > 21 && a <= 21)) {
             return Math.min(a, b);
-        else return a > 21 ? 0 : Math.max(a, b);
+        }
+        return a > 21 ? 0 : Math.max(a, b);
     }
-    
+
     /*
     evenlySpaced
     Given three ints, a b c, one of them is small, one is medium and one is large. Return true if
@@ -98,7 +103,7 @@ public class CodingBat {
     public boolean evenlySpaced(int a, int b, int c) {
         return b - c == a - b || a - c == b - a || c - b == a - c;
     }
-    
+
     /*
     makeChocolate
     We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and
@@ -106,9 +111,10 @@ public class CodingBat {
     big bars before small bars. Return -1 if it can't be done.
      */
     public int makeChocolate(int small, int big, int goal) {
-        if (5 * big >= goal)
+        if (5 * big >= goal) {
             return small >= goal % 5 ? goal % 5 : -1;
-        else return small + 5 * big >= goal ? goal - 5 * big : -1;
+        }
+        return small + 5 * big >= goal ? goal - 5 * big : -1;
     }
 
 }
