@@ -133,8 +133,9 @@ public class CodingBat {
     length 0, 1, or 2.
      */
     public boolean double23(int[] nums) {
-        if (nums.length == 2)
+        if (nums.length == 2) {
             return nums[0] == 2 && nums[1] == 2 || nums[0] == 3 && nums[1] == 3;
+        }
         return false;
     }
 
@@ -144,10 +145,12 @@ public class CodingBat {
     3 element to 0. Return the changed array.
      */
     public int[] fix23(int[] nums) {
-        if (nums[0] == 2 && nums[1] == 3)
+        if (nums[0] == 2 && nums[1] == 3) {
             return new int[] {2, 0, nums[2]};
-        if (nums[1] == 2 && nums[2] == 3)
+        }
+        if (nums[1] == 2 && nums[2] == 3) {
             return new int[] {nums[0], 2, 0};
+        }
         return nums;
     }
 
@@ -157,8 +160,9 @@ public class CodingBat {
     their first element.
      */
     public int start1(int[] a, int[] b) {
-        if (a.length > 0 && a[0] == 1)
+        if (a.length > 0 && a[0] == 1) {
             return b.length > 0 && b[0] == 1 ? 2 : 1;
+        }
         return b.length > 0 && b[0] == 1 ? 1 : 0;
     }
 
@@ -252,10 +256,12 @@ public class CodingBat {
     0, but there will be 2 or more elements available between the 2 arrays.
      */
     public int[] make2(int[] a, int[] b) {
-        if (a.length == 0)
+        if (a.length == 0) {
             return new int[] {b[0], b[1]};
-        if (a.length == 1)
+        }
+        if (a.length == 1) {
             return new int[] {a[0], b[0]};
+        }
         return new int[] {a[0], a[1]};
     }
 
@@ -266,12 +272,14 @@ public class CodingBat {
      */
     public int[] front11(int[] a, int[] b) {
         if (a.length == 0) {
-            if (b.length == 0)
+            if (b.length == 0) {
                 return new int[] {};
+            }
             return new int[] {b[0]};
         }
-        if (b.length == 0)
+        if (b.length == 0) {
             return new int[] {a[0]};
+        }
         return new int[] {a[0], b[0]};
     }
 

@@ -7,8 +7,9 @@ public class CodingBat {
      */
     public String stringTimes(String str, int n) {
         String ret = "";
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) {
             ret += str;
+        }
         return ret;
     }
 
@@ -19,8 +20,9 @@ public class CodingBat {
      */
     public String frontTimes(String str, int n) {
         String ret = "";
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) {
             ret += str.length() > 3 ? str.substring(0, 3) : str;
+        }
         return ret;
     }
 
@@ -31,9 +33,11 @@ public class CodingBat {
      */
     int countXX(String str) {
         int count = 0;
-        for (int i = 0; i < str.length() - 1; i++)
-            if (str.substring(i, i + 2).equals("xx"))
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 2).equals("xx")) {
                 count++;
+            }
+        }
         return count;
     }
 
@@ -54,8 +58,9 @@ public class CodingBat {
      */
     public String stringBits(String str) {
         String ret = "";
-        for (int i = 0; i < str.length(); i += 2)
+        for (int i = 0; i < str.length(); i += 2) {
             ret += str.charAt(i);
+        }
         return ret;
     }
 
@@ -65,8 +70,9 @@ public class CodingBat {
      */
     public String stringSplosion(String str) {
         String ret = "";
-        for (int i = 1; i < str.length() + 1; i++)
+        for (int i = 1; i < str.length() + 1; i++) {
             ret += str.substring(0, i);
+        }
         return ret;
     }
 
@@ -78,9 +84,11 @@ public class CodingBat {
      */
     public int last2(String str) {
         int count = 0;
-        for (int i = 0; i < str.length() - 2; i++)
-            if (str.substring(i, i + 2).equals(str.substring(str.length() - 2)))
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 2).equals(str.substring(str.length() - 2))) {
                 count++;
+            }
+        }
         return count;
     }
 
@@ -90,9 +98,11 @@ public class CodingBat {
      */
     public int arrayCount9(int[] nums) {
         int count = 0;
-        for (int i = 0; i < nums.length; i++)
-            if (nums[i] == 9)
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 9) {
                 count++;
+            }
+        }
         return count;
     }
 
@@ -102,9 +112,11 @@ public class CodingBat {
     array length may be less than 4.
      */
     public boolean arrayFront9(int[] nums) {
-        for (int i = 0; i < (nums.length > 4 ? 4 : nums.length); i++)
-            if (nums[i] == 9)
+        for (int i = 0; i < (nums.length > 4 ? 4 : nums.length); i++) {
+            if (nums[i] == 9) {
                 return true;
+            }
+        }
         return false;
     }
 
@@ -114,9 +126,11 @@ public class CodingBat {
     somewhere.
      */
     public boolean array123(int[] nums) {
-        for (int i = 0; i < nums.length - 2; i++)
-            if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3)
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 1 && nums[i + 1] == 2 && nums[i + 2] == 3) {
                 return true;
+            }
+        }
         return false;
     }
 
@@ -128,9 +142,11 @@ public class CodingBat {
      */
     public int stringMatch(String a, String b) {
         int count = 0;
-        for (int i = 0; i < (a.length() >= b.length() ? b.length() : a.length()) - 1; i++)
-            if (a.substring(i, i + 2).equals(b.substring(i, i + 2)))
+        for (int i = 0; i < (a.length() >= b.length() ? b.length() : a.length()) - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
                 count++;
+            }
+        }
         return count;
     }
 
@@ -141,9 +157,11 @@ public class CodingBat {
      */
     public String stringX(String str) {
         String ret = "";
-        for (int i = 0; i < str.length(); i++)
-            if (i == 0 || str.charAt(i) != 'x' || i == str.length() - 1)
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0 || str.charAt(i) != 'x' || i == str.length() - 1) {
                 ret += str.charAt(i);
+            }
+        }
         return ret;
     }
 
@@ -154,8 +172,9 @@ public class CodingBat {
      */
     public String altPairs(String str) {
         String ret = "";
-        for (int i = 0; i < str.length(); i += 4)
+        for (int i = 0; i < str.length(); i += 4) {
             ret += i < str.length() - 1 ? str.substring(i, i + 2) : str.charAt(i);
+        }
         return ret;
     }
 
@@ -166,10 +185,13 @@ public class CodingBat {
      */
     public String stringYak(String str) {
         String ret = "";
-        for (int i = 0; i < str.length(); i++)
-            if (i < str.length() - 2 && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k')
+        for (int i = 0; i < str.length(); i++) {
+            if (i < str.length() - 2 && str.charAt(i) == 'y' && str.charAt(i + 2) == 'k') {
                 i += 2;
-            else ret += str.charAt(i);
+            } else {
+                ret += str.charAt(i);
+            }
+        }
         return ret;
     }
 
@@ -180,9 +202,11 @@ public class CodingBat {
      */
     public int array667(int[] nums) {
         int count = 0;
-        for (int i = 0; i < nums.length - 1; i++)
-            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7))
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) {
                 count++;
+            }
+        }
         return count;
     }
 
@@ -192,9 +216,11 @@ public class CodingBat {
     array. Return true if the array does not contain any triples.
      */
     public boolean noTriples(int[] nums) {
-        for (int i = 0; i < nums.length - 2; i++)
-            if (nums[i] == nums[i + 1] && nums[i] == nums[i + 2])
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i] == nums[i + 2]) {
                 return false;
+            }
+        }
         return true;
     }
 
@@ -205,9 +231,11 @@ public class CodingBat {
     differs by 2 or less from the correct value.
      */
     public boolean has271(int[] nums) {
-        for (int i = 0; i < nums.length - 2; i++)
-            if (nums[i + 1] == nums[i] + 5 && Math.abs(nums[i + 2] - nums[i] + 1) <= 2)
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i + 1] == nums[i] + 5 && Math.abs(nums[i + 2] - nums[i] + 1) <= 2) {
                 return true;
+            }
+        }
         return false;
     }
 

@@ -45,12 +45,14 @@ public class CodingBat {
      */
     public int caughtSpeeding(int speed, boolean isBirthday) {
         if (isBirthday) {
-            if (speed <= 65)
+            if (speed <= 65) {
                 return 0;
+            }
             return speed >= 86 ? 2 : 1;
         }
-        if (speed <= 60)
+        if (speed <= 60) {
             return 0;
+        }
         return speed >= 81 ? 2 : 1;
     }
 
@@ -73,12 +75,14 @@ public class CodingBat {
      */
     public String alarmClock(int day, boolean vacation) {
         if (vacation) {
-            if (day == 0 || day == 6)
+            if (day == 0 || day == 6) {
                 return "off";
+            }
             return "10:00";
         }
-        if (day == 0 || day == 6)
+        if (day == 0 || day == 6) {
             return "10:00";
+        }
         return "7:00";
     }
 
@@ -177,8 +181,9 @@ public class CodingBat {
     always bad (0).
      */
     public int teaParty(int tea, int candy) {
-        if (tea >= 5 && candy >= 5)
+        if (tea >= 5 && candy >= 5) {
             return tea >= 2 * candy || candy >= 2 * tea ? 2 : 1;
+        }
         return 0;
     }
 
@@ -190,12 +195,14 @@ public class CodingBat {
      */
     public String fizzString(String str) {
         if (str.startsWith("f")) {
-            if (str.endsWith("b"))
+            if (str.endsWith("b")) {
                 return "FizzBuzz";
+            }
             return "Fizz";
         }
-        if (str.endsWith("b"))
+        if (str.endsWith("b")) {
             return "Buzz";
+        }
         return str;
     }
 
@@ -210,12 +217,14 @@ public class CodingBat {
      */
     public String fizzString2(int n) {
         if (n % 3 == 0) {
-            if (n % 5 == 0)
+            if (n % 5 == 0) {
                 return "FizzBuzz!";
+            }
             return "Fizz!";
         }
-        if (n % 5 == 0)
+        if (n % 5 == 0) {
             return "Buzz!";
+        }
         return n + "!";
     }
 
@@ -273,8 +282,9 @@ public class CodingBat {
      */
     public int withoutDoubles(int die1, int die2, boolean noDoubles) {
         if (noDoubles && die1 == die2) {
-            if (die1 == 6 && die2 == 6)
+            if (die1 == 6 && die2 == 6) {
                 return 7;
+            }
             return die1 + die2 + 1;
         }
         return die1 + die2;
@@ -320,10 +330,12 @@ public class CodingBat {
     sums, the result is 5. Otherwise the result is 0.
      */
     public int blueTicket(int a, int b, int c) {
-        if (a + b == 10 || b + c == 10 || a + c == 10)
+        if (a + b == 10 || b + c == 10 || a + c == 10) {
             return 10;
-        if (a + b == b + c + 10 || a + b == a + c + 10)
+        }
+        if (a + b == b + c + 10 || a + b == a + c + 10) {
             return 5;
+        }
         return 0;
     }
 

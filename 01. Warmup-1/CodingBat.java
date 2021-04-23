@@ -71,8 +71,9 @@ public class CodingBat {
     parameter "negative" is true, then return true only if both are negative.
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        if (negative)
+        if (negative) {
             return a < 0 && b < 0;
+        }
         return (a < 0 && b > 0) || (a > 0 && b < 0);
     }
 
@@ -101,8 +102,9 @@ public class CodingBat {
     Given a string, return a new string where the first and last chars have been exchanged.
      */
     public String frontBack(String str) {
-        if (str.length() > 1)
+        if (str.length() > 1) {
             return str.charAt(str.length() - 1) + str.substring(1, str.length() - 1) + str.charAt(0);
+        }
         return str;
     }
 
@@ -113,8 +115,9 @@ public class CodingBat {
     front.
      */
     public String front3(String str) {
-        if (str.length() < 3)
+        if (str.length() < 3) {
             return str + str + str;
+        }
         return str.substring(0, 3) + str.substring(0, 3) + str.substring(0, 3);
     }
 
@@ -143,8 +146,9 @@ public class CodingBat {
     whatever chars are there.
      */
     public String front22(String str) {
-        if (str.length() < 2)
+        if (str.length() < 2) {
             return str + str + str;
+        }
         return str.substring(0, 2) + str + str.substring(0, 2);
     }
 
@@ -198,8 +202,9 @@ public class CodingBat {
     "del" has been deleted. Otherwise, return the string unchanged.
      */
     public String delDel(String str) {
-        if (str.length() > 3 && str.substring(1, 4).equals("del"))
+        if (str.length() > 3 && str.substring(1, 4).equals("del")) {
             return str.charAt(0) + str.substring(4);
+        }
         return str;
     }
 
@@ -218,8 +223,9 @@ public class CodingBat {
     char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
      */
     public String startOz(String str) {
-        if (str.length() > 0 && str.charAt(0) == 'o')
+        if (str.length() > 0 && str.charAt(0) == 'o') {
             return str.length() > 1 && str.charAt(1) == 'z' ? "oz" : "o";
+        }
         return str.length() > 1 && str.charAt(1) == 'z' ? "z" : "";
     }
 
@@ -237,8 +243,9 @@ public class CodingBat {
     event of a tie. Note that Math.abs(n) returns the absolute value of a number.
      */
     public int close10(int a, int b) {
-        if (Math.abs(10 - a) == Math.abs(10 - b))
+        if (Math.abs(10 - a) == Math.abs(10 - b)) {
             return 0;
+        }
         return Math.abs(10 - a) > Math.abs(10 - b) ? b : a;
     }
 
@@ -259,8 +266,9 @@ public class CodingBat {
     return 0 if neither is in that range.
      */
     public int max1020(int a, int b) {
-        if (a >= 10 && a <= 20)
+        if (a >= 10 && a <= 20) {
             return b >= 10 && b <= 20 ? Math.max(a, b) : a;
+        }
         return b >= 10 && b <= 20 ? b : 0;
     }
 
@@ -270,9 +278,11 @@ public class CodingBat {
      */
     public boolean stringE(String str) {
         int count = 0;
-        for (int i = 0; i < str.length(); i++)
-            if (str.charAt(i) == 'e')
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e') {
                 count++;
+            }
+        }
         return count >= 1 && count <= 3;
     }
 
@@ -307,8 +317,9 @@ public class CodingBat {
      */
     public String everyNth(String str, int n) {
         String ret = "";
-        for (int i = 0; i < str.length(); i += n)
+        for (int i = 0; i < str.length(); i += n) {
             ret += str.charAt(i);
+        }
         return ret;
     }
 

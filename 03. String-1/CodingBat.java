@@ -163,8 +163,9 @@ public class CodingBat {
     length will be at least 2.
      */
     public String twoChar(String str, int index) {
-        if (str.length() - index >= 2 && index >= 0)
+        if (str.length() - index >= 2 && index >= 0) {
             return str.substring(index, index + 2);
+        }
         return str.substring(0, 2);
     }
 
@@ -184,8 +185,9 @@ public class CodingBat {
     Note: use .equals() to compare 2 strings.
      */
     public boolean hasBad(String str) {
-        if (str.length() <= 3)
+        if (str.length() <= 3) {
             return str.equals("bad");
+        }
         return str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad");
     }
 
@@ -195,8 +197,9 @@ public class CodingBat {
     than 2, use '@' for the missing chars.
      */
     public String atFirst(String str) {
-        if (str.length() == 0)
+        if (str.length() == 0) {
             return "@@";
+        }
         return str.length() == 1 ? str + "@" : str.substring(0, 2);
     }
 
@@ -206,8 +209,9 @@ public class CodingBat {
     of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
      */
     public String lastChars(String a, String b) {
-        if (a.length() == 0)
+        if (a.length() == 0) {
             return b.length() == 0 ? "@@" : "@" + b.substring(b.length() - 1);
+        }
         return b.length() == 0 ? a.charAt(0) + "@" : a.charAt(0) + b.substring(b.length() - 1);
     }
 
@@ -218,8 +222,9 @@ public class CodingBat {
     "abc" and "cat" yields "abcat".
      */
     public String conCat(String a, String b) {
-        if (!b.isEmpty() && a.endsWith(b.substring(0, 1)))
+        if (!b.isEmpty() && a.endsWith(b.substring(0, 1))) {
             return a + b.substring(1);
+        }
         return a + b;
     }
 
@@ -243,8 +248,9 @@ public class CodingBat {
     return the empty string.
      */
     public String seeColor(String str) {
-        if (str.length() >= 3 && str.substring(0, 3).equals("red"))
+        if (str.length() >= 3 && str.substring(0, 3).equals("red")) {
             return "red";
+        }
         return str.length() > 3 && str.substring(0, 4).equals("blue") ? "blue" : "";
     }
 
@@ -265,10 +271,12 @@ public class CodingBat {
     be any length.
      */
     public String minCat(String a, String b) {
-        if (a.length() == b.length())
+        if (a.length() == b.length()) {
             return a + b;
-        if (a.length() > b.length())
+        }
+        if (a.length() > b.length()) {
             return a.substring(a.length() - b.length()) + b;
+        }
         return a + b.substring(b.length() - a.length());
     }
 
@@ -279,8 +287,9 @@ public class CodingBat {
     there.
      */
     public String extraFront(String str) {
-        if (str.length() > 2)
+        if (str.length() > 2) {
             return str.substring(0, 2) + str.substring(0, 2) + str.substring(0, 2);
+        }
         return str + str + str;
     }
 
@@ -291,8 +300,9 @@ public class CodingBat {
     may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
      */
     public String without2(String str) {
-        if (str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length() - 2)))
+        if (str.length() > 1 && str.substring(0, 2).equals(str.substring(str.length() - 2))) {
             return str.substring(2);
+        }
         return str;
     }
 
@@ -303,12 +313,15 @@ public class CodingBat {
      */
     public String deFront(String str) {
         StringBuilder ret;
-        if (str.length() > 0 && str.charAt(0) == 'a')
+        if (str.length() > 0 && str.charAt(0) == 'a') {
             ret = new StringBuilder("a");
-        else ret = new StringBuilder(0);
+        } else {
+            ret = new StringBuilder(0);
+        }
         if (str.length() > 1) {
-            if (str.charAt(1) == 'b')
+            if (str.charAt(1) == 'b') {
                 return ret.append("b").append(str.substring(2)).toString();
+            }
             return ret.append(str.substring(2)).toString();
         }
         return ret.toString();
@@ -324,8 +337,9 @@ public class CodingBat {
      */
     public String startWord(String str, String word) {
         boolean strAtLeastWord = str.length() >= word.length();
-        if (strAtLeastWord && word.substring(1).equals(str.substring(1, word.length())))
+        if (strAtLeastWord && word.substring(1).equals(str.substring(1, word.length()))) {
             return str.substring(0, word.length());
+        }
         return "";
     }
 
@@ -336,12 +350,14 @@ public class CodingBat {
      */
     public String withoutX(String str) {
         if (str.length() > 0 && str.charAt(0) == 'x') {
-            if (str.length() > 1 && str.charAt(str.length() - 1) == 'x')
+            if (str.length() > 1 && str.charAt(str.length() - 1) == 'x') {
                 return str.substring(1, str.length() - 1);
+            }
             return str.substring(1);
         }
-        if (str.length() > 1 && str.charAt(str.length() - 1) == 'x')
+        if (str.length() > 1 && str.charAt(str.length() - 1) == 'x') {
             return str.substring(0, str.length() - 1);
+        }
         return str;
     }
 
@@ -352,12 +368,15 @@ public class CodingBat {
      */
     public String withoutX2(String str) {
         StringBuilder ret;
-        if (str.length() > 0 && str.charAt(0) != 'x')
+        if (str.length() > 0 && str.charAt(0) != 'x') {
             ret = new StringBuilder(str.substring(0, 1));
-        else ret = new StringBuilder(0);
+        } else {
+            ret = new StringBuilder(0);
+        }
         if (str.length() > 1) {
-            if (str.charAt(1) != 'x')
+            if (str.charAt(1) != 'x') {
                 return ret.append(str.charAt(1)).append(str.substring(2)).toString();
+            }
             return ret.append(str.substring(2)).toString();
         }
         return ret.toString();
