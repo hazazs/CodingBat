@@ -310,11 +310,12 @@ public class CodingBat {
     public String plusOut(String str, String word) {
         StringBuilder ret = new StringBuilder(str.length());
         for (int i = 0; i < str.length(); i++) {
-            if (i < str.length() - word.length() + 1 && str.substring(i, i + word.length()).equals(word)) {
+            boolean isWordFit = i < str.length() - word.length() + 1;
+            if (isWordFit && str.substring(i, i + word.length()).equals(word)) {
                 ret.append(word);
                 i += word.length() - 1;
             } else {
-                ret.append("+");
+                ret.append('+');
             }
         }
         return ret.toString();
