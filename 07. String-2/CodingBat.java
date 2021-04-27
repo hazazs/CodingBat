@@ -160,7 +160,7 @@ public class CodingBat {
      */
     public String repeatFront(String str, int n) {
         int len = 0;
-        for (int i = n; i > 0; i--, len += i) {
+        for (int i = n; i > 0; len += i--) {
         }
         StringBuilder ret = new StringBuilder(len);
         for (int i = n; i > 0; i--) {
@@ -247,9 +247,9 @@ public class CodingBat {
     "abcdef" yields "bcaefd". Ignore any group of fewer than 3 chars at the end.
      */
     public String oneTwo(String str) {
-        StringBuilder ret = new StringBuilder(str.length() < 3 ? 0 : str.length());
+        StringBuilder ret = new StringBuilder(str.length() / 3 * 3);
         for (int i = 0; i < str.length() - (str.length() % 3); i += 3) {
-            ret.append(str.charAt(i + 1)).append(str.charAt(i + 2)).append(str.charAt(i));
+            ret.append(str.substring(i + 1, i + 3)).append(str.charAt(i));
         }
         return ret.toString();
     }
@@ -261,15 +261,19 @@ public class CodingBat {
     yields "zpXzp".
      */
     public String zipZap(String str) {
-        StringBuilder ret = new StringBuilder(str.length() - str.length() / 3);
+        int numberOfZP = 0;
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.substring(i, i + 3).matches("z.p")) {
+                numberOfZP++;
+            }
+        }
+        StringBuilder ret = new StringBuilder(str.length() - numberOfZP);
         if (str.length() > 0) {
             ret.append(str.charAt(0));
         }
-        for (int i = 1; i < str.length() - 1; i++) {
-            if (!(str.charAt(i - 1) == 'z' && str.charAt(i + 1) == 'p')) {
+        for (int i = 1; i < str.length() - 1; i++)
+            if (!(str.charAt(i - 1) == 'z' && str.charAt(i + 1) == 'p'))
                 ret.append(str.charAt(i));
-            }
-        }
         if (str.length() > 1) {
             return ret.append(str.substring(str.length() - 1)).toString();
         }
