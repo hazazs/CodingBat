@@ -271,9 +271,11 @@ public class CodingBat {
         if (str.length() > 0) {
             ret.append(str.charAt(0));
         }
-        for (int i = 1; i < str.length() - 1; i++)
-            if (!(str.charAt(i - 1) == 'z' && str.charAt(i + 1) == 'p'))
+        for (int i = 1; i < str.length() - 1; i++) {
+            if (!(str.charAt(i - 1) == 'z' && str.charAt(i + 1) == 'p')) {
                 ret.append(str.charAt(i));
+            }
+        }
         if (str.length() > 1) {
             return ret.append(str.substring(str.length() - 1)).toString();
         }
@@ -287,13 +289,12 @@ public class CodingBat {
     yields "ad".
      */
     public String starOut(String str) {
-        int numberOfStars = 0;
+        StringBuilder ret = new StringBuilder(0);
         for (int i = 0; i < str.length(); i++) {
-            numberOfStars += str.charAt(i) == '*' ? 1 : 0;
-        }
-        StringBuilder ret = new StringBuilder(str.length() - numberOfStars);
-        for (int i = 0; i < str.length(); i++) {
-            if ((i == 0 || str.charAt(i - 1) != '*') && str.charAt(i) != '*' && (i == str.length() - 1 || str.charAt(i + 1) != '*')) {
+            boolean isPreviousAsterisk = i != 0 && str.charAt(i - 1) == '*';
+            boolean isAsterisk = str.charAt(i) == '*';
+            boolean isNextAsterisk = i != str.length() - 1 && str.charAt(i + 1) == '*';
+            if (!isPreviousAsterisk && !isAsterisk && !isNextAsterisk) {
                 ret.append(str.charAt(i));
             }
         }
