@@ -159,10 +159,7 @@ public class CodingBat {
     between 0 and the length of the string, inclusive (i.e. n >= 0 and n <= str.length()).
      */
     public String repeatFront(String str, int n) {
-        int len = 0;
-        for (int i = n; i > 0; len += i--) {
-        }
-        StringBuilder ret = new StringBuilder(len);
+        StringBuilder ret = new StringBuilder(n * (n + 1) / 2);
         for (int i = n; i > 0; i--) {
             ret.append(str.substring(0, i));
         }
@@ -261,13 +258,7 @@ public class CodingBat {
     yields "zpXzp".
      */
     public String zipZap(String str) {
-        int numberOfZP = 0;
-        for (int i = 0; i < str.length() - 2; i++) {
-            if (str.substring(i, i + 3).matches("z.p")) {
-                numberOfZP++;
-            }
-        }
-        StringBuilder ret = new StringBuilder(str.length() - numberOfZP);
+        StringBuilder ret = new StringBuilder(str.length());
         if (str.length() > 0) {
             ret.append(str.charAt(0));
         }
@@ -289,7 +280,7 @@ public class CodingBat {
     yields "ad".
      */
     public String starOut(String str) {
-        StringBuilder ret = new StringBuilder(0);
+        StringBuilder ret = new StringBuilder(str.length());
         for (int i = 0; i < str.length(); i++) {
             boolean isPreviousAsterisk = i != 0 && str.charAt(i - 1) == '*';
             boolean isAsterisk = str.charAt(i) == '*';
@@ -328,7 +319,7 @@ public class CodingBat {
     char before or after the word, and a char may be included twice if it is between two words.
      */
     public String wordEnds(String str, String word) {
-        StringBuilder ret = new StringBuilder(0);
+        StringBuilder ret = new StringBuilder(str.length());
         for (int i = 0; i < str.length() - word.length() + 1; i++) {
             if (str.substring(i, i + word.length()).equals(word)) {
                 if (i > 0) {
