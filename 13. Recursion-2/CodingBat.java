@@ -105,12 +105,12 @@ public class CodingBat {
             return target == 0;
         }
         int extent = 1;
-        for (int i = start; i < nums.length - 1; i++) {
-            if (nums[start] == nums[start + 1]) {
-                extent++;
-            }
-            break;
-        }
+		for (int i = start + 1; i < nums.length; i++) {
+			if (nums[start] != nums[i]) {
+				break;
+			}
+			extent++;
+		}
         if (groupSumClump(start + extent, nums, target - extent * nums[start])) {
             return true;
         }
